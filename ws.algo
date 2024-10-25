@@ -1,4 +1,4 @@
-ALGORITHM boucleFOR_sumde_Nnombre
+ALGORITHM boucleFOR_sum_Nnombre
 
 
 VAR
@@ -26,7 +26,7 @@ END
 
 // *************************************************************************
 
-ALGORITHM boucleWhileDo_sumde_Nnombre
+ALGORITHM boucleWhileDo_sum_Nnombre
 VAR
      n:INTEGER;
     sum:INTEGER:=0;
@@ -45,18 +45,21 @@ END
 //n=2?0          n<>0 sum =3+2=5  n=1          2nd;
 //n=1?0 n<>0 sum=5+1=6     n=0;
 //n=0?0 egalite condition non satisfaite (sortie du while)   
-// exemple
+
+// ****************************************************************************
+// exemple:equation 1er deg
 // bx+c=o 3x-1=0  0x+5=0
 IF (b =0) THEN
-    if(c=0) write("sol infini")
-    else write("ensemble vide")
-
+    IF (c=0) THEN
+    Write("sol infini")
+    ELSE
+   Write("ensemble vide")
 ELSE
       write("solution", -b/c)
 END_IF
-
+// ********************************************************************************
 
 // checkpoint : explication
 //sentence: We are at GOMYCODE.(input)
 //cptChar  cptW cptV??? 
-//output expected:cptChar= 18 cptW=4 cptV=8
+//output expected:  cptChar= 18 cptW=4 cptV=8
