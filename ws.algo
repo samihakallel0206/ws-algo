@@ -1,0 +1,62 @@
+ALGORITHM boucleFOR_sumde_Nnombre
+
+
+VAR
+    n,i:INTEGER;
+    sum:INTEGER:=0;
+
+
+BEGIN
+    Read(n);  //n entree (input) 
+    //initialement n=4 i=1 sum=0 
+    FOR i FROM 1 TO n STEP 1  DO  // test i<=n
+       sum:=sum+i;
+    END_FOR // incrementation de i
+    
+    Write("the sum is:", sum)
+    
+    
+END
+// deroulement
+//1st: n=4  i=1  i?n sum=0+1=1
+//2nd: n=4  i=2  i?n sum=1+2=3
+//3d: n=4 i=3 i?n sum=3+3=6
+//4th: n=4 i=4 i?n sum=6+4=10
+//5th: n=4 i=5 i?n condition i<=4 non verifiee sortie end for
+
+// *************************************************************************
+
+ALGORITHM boucleWhileDo_sumde_Nnombre
+VAR
+     n:INTEGER;
+    sum:INTEGER:=0;
+BEGIN
+    Read(n);
+    //initialement: sum=0 n=3(input from read)
+    WHILE (n<>0) DO
+        sum:=sum+n;
+        n:=n-1;
+    END_WHILE
+    Write("the sum is:", sum)
+
+END
+// deroulement
+//n=3?0(entree utilisateur) n<>0 sum=0+3=3  n=2 1fst;
+//n=2?0          n<>0 sum =3+2=5  n=1          2nd;
+//n=1?0 n<>0 sum=5+1=6     n=0;
+//n=0?0 egalite condition non satisfaite (sortie du while)   
+// exemple
+// bx+c=o 3x-1=0  0x+5=0
+IF (b =0) THEN
+    if(c=0) write("sol infini")
+    else write("ensemble vide")
+
+ELSE
+      write("solution", -b/c)
+END_IF
+
+
+// checkpoint : explication
+//sentence: We are at GOMYCODE.(input)
+//cptChar  cptW cptV??? 
+//output expected:cptChar= 18 cptW=4 cptV=8
